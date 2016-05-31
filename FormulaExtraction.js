@@ -24,7 +24,8 @@ var extract = function (component) {
     var newStr = times > 1 ? component.substring(0, pos) + replacement + component.substring(pos1 + 2, component.length) :
         component.substring(0, pos) + replacement + component.substring(pos1 + 1, component.length);
     return newStr;
-}
+};
+
 //Step:2
 //Spreads individual components
 //For example: Transforms ch2oh2oh2oco2co2co2co2c to chhohhohhocoocoocoocooc
@@ -39,7 +40,7 @@ var spread = function (component) {
         return result;
     }).join('');
     return spread;
-}
+};
 
 //Step:3
 //Finds the count of occurences and groups them together
@@ -59,6 +60,6 @@ var group = function (spread) {
 
 
 
-var formula = '(c(h2o)2(h2o)(co2)4c)';
-var simplified = extractComponents(formula);
+//All set
+var simplified = extractComponents('(c(h2o(mx)3)2(h2o)(co2)4c)');
 console.log(simplified);
