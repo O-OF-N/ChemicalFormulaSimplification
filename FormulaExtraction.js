@@ -59,6 +59,6 @@ var group = function (spread) {
 
 
 
-
-var simplified = extractComponents('(c(h2o)2(h2o)(co2)4c)');
+var formula = '(c(h2o)2(h2o)(co2)4c)';
+var simplified = extractComponents(formula);
 console.log(simplified);
